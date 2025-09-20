@@ -1,0 +1,4 @@
+fastapipip 
+
+uvicorn[standard]
+rapidfuzz

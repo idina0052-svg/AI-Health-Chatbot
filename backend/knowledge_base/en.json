@@ -1,0 +1,253 @@
+{
+  "bleeding": {
+    "keywords": ["bleeding", "cut", "wound", "blood"],
+    "steps": [
+      "Wash your hands if possible before touching the wound.",
+      "Apply firm pressure with a clean cloth or bandage to stop the bleeding.",
+      "Keep the injured part elevated above the heart if possible."
+    ],
+    "followups": [
+      {
+        "question": "Is the bleeding spurting or unusually heavy? (yes/no)",
+        "yes_intent": "severe_bleeding",
+        "no_intent": null
+      }
+    ],
+    "escalation": "If bleeding does not stop after 10 minutes or is severe, seek emergency medical care."
+  },
+
+  "severe_bleeding": {
+    "keywords": ["severe bleeding", "spurting blood", "arterial"],
+    "steps": [
+      "Call for emergency help immediately if available.",
+      "Apply very firm pressure and pack the wound with clean cloth.",
+      "If trained and a tourniquet is available, apply it above the wound.",
+      "Keep the person calm and monitor breathing."
+    ],
+    "escalation": "Seek urgent hospital care immediately."
+  },
+
+  "burns": {
+    "keywords": ["burn", "burns", "scald"],
+    "steps": [
+      "Cool the burn under cool running water for at least 20 minutes.",
+      "Do not apply oil, butter, or toothpaste.",
+      "Cover loosely with a clean, non-fluffy cloth."
+    ],
+    "escalation": "Seek medical care for severe burns, burns on face/genitals, or large area burns."
+  },
+
+  "fracture": {
+    "keywords": ["fracture", "broken bone", "broken arm", "broken leg"],
+    "steps": [
+      "Immobilize the injured area. Do not try to straighten the bone.",
+      "Apply a cold pack wrapped in cloth to reduce swelling.",
+      "Keep the person still until medical help arrives."
+    ],
+    "escalation": "Seek urgent medical help immediately."
+  },
+
+  "choking": {
+    "keywords": ["choking", "cannot breathe", "airway blocked"],
+    "steps": [
+      "Encourage the person to cough if they can.",
+      "If they cannot breathe, cough, or speak: give 5 back blows between the shoulder blades.",
+      "If still choking, perform abdominal thrusts (Heimlich maneuver)."
+    ],
+    "escalation": "Call emergency services immediately if the person becomes unconscious."
+  },
+
+  "fever": {
+    "keywords": ["fever", "temperature", "high fever"],
+    "steps": [
+      "Encourage rest in a cool environment.",
+      "Give fluids to prevent dehydration.",
+      "Apply a cool damp cloth to the forehead."
+    ],
+    "escalation": "Seek medical attention if fever is very high, persistent, or accompanied by confusion, breathing problems, or seizures."
+  },
+
+  "diarrhea": {
+    "keywords": ["diarrhea", "loose stool", "watery stool"],
+    "steps": [
+      "Drink plenty of safe fluids.",
+      "Use Oral Rehydration Solution (ORS) after each episode if available.",
+      "Avoid unsafe or spoiled food."
+    ],
+    "escalation": "Seek medical help if diarrhea is severe, bloody, or persistent."
+  },
+
+  "vomiting": {
+    "keywords": ["vomiting", "throwing up"],
+    "steps": [
+      "Sip small amounts of clean water or ORS frequently.",
+      "Avoid solid food until vomiting stops.",
+      "Rest in a comfortable position."
+    ],
+    "escalation": "Seek medical help if vomiting persists, contains blood, or causes dehydration."
+  },
+
+  "cough": {
+    "keywords": ["cough", "persistent cough"],
+    "steps": [
+      "Drink warm fluids.",
+      "Rest in a well-ventilated room.",
+      "Avoid smoke and dust."
+    ],
+    "escalation": "Seek medical help if cough lasts more than 2 weeks, produces blood, or is accompanied by breathing difficulty."
+  },
+
+  "asthma": {
+    "keywords": ["asthma", "asthma attack", "wheezing"],
+    "steps": [
+      "Sit the person upright and keep them calm.",
+      "Use an inhaler if prescribed.",
+      "Loosen tight clothing."
+    ],
+    "escalation": "Seek urgent medical care if symptoms do not improve within 20 minutes or worsen."
+  },
+
+  "malaria": {
+    "keywords": ["malaria", "chills", "night sweats"],
+    "steps": [
+      "Note symptoms: fever, chills, sweating, headache.",
+      "Ensure hydration and rest."
+    ],
+    "escalation": "Seek medical testing and treatment immediately if malaria is suspected."
+  },
+
+  "stress": {
+    "keywords": ["stress", "anxiety", "worried"],
+    "steps": [
+      "Practice deep breathing (inhale 4 seconds, hold 4 seconds, exhale 4 seconds).",
+      "Engage in relaxation, prayer, or talking with someone you trust."
+    ],
+    "escalation": "If stress is overwhelming or persistent, seek professional support."
+  },
+
+  "trauma": {
+    "keywords": ["trauma", "shock", "emotional trauma"],
+    "steps": [
+      "Acknowledge feelings of fear, sadness, or anger.",
+      "Talk with trusted people.",
+      "Engage in daily routines and safe activities."
+    ],
+    "escalation": "Seek mental health support if symptoms worsen or interfere with daily life."
+  },
+
+  "depression": {
+    "keywords": ["depression", "sadness", "hopeless"],
+    "steps": [
+      "Talk with someone you trust about your feelings.",
+      "Engage in simple activities you enjoy.",
+      "Maintain a routine if possible."
+    ],
+    "escalation": "Seek mental health support if sadness persists for weeks or interferes with life."
+  },
+
+  "snake_bite": {
+    "keywords": ["snake bite", "snakebite"],
+    "steps": [
+      "Keep the person calm and still.",
+      "Immobilize the bitten limb.",
+      "Do not cut, suck, or apply ice to the wound."
+    ],
+    "escalation": "Get medical help immediately."
+  },
+
+  "dog_bite": {
+    "keywords": ["dog bite", "rabies"],
+    "steps": [
+      "Wash the wound thoroughly with soap and water for at least 15 minutes.",
+      "Apply antiseptic if available."
+    ],
+    "escalation": "Seek urgent medical care for rabies prevention."
+  },
+
+  "eye_injury": {
+    "keywords": ["eye injury", "something in eye", "eye pain"],
+    "steps": [
+      "Do not rub the eye.",
+      "If chemical, rinse gently with clean water.",
+      "Cover with a clean cloth."
+    ],
+    "escalation": "Seek medical care urgently."
+  },
+
+  "nosebleed": {
+    "keywords": ["nosebleed", "bleeding nose"],
+    "steps": [
+      "Sit upright and lean forward.",
+      "Pinch the soft part of the nose for 10 minutes."
+    ],
+    "escalation": "Seek medical help if bleeding is heavy or does not stop."
+  },
+
+  "heat_stroke": {
+    "keywords": ["heat stroke", "overheating"],
+    "steps": [
+      "Move the person to a cool shaded place.",
+      "Remove excess clothing.",
+      "Sponge with cool water and fan."
+    ],
+    "escalation": "Seek urgent medical care immediately."
+  },
+
+  "hypothermia": {
+    "keywords": ["hypothermia", "very cold", "frozen"],
+    "steps": [
+      "Move person to a warm place.",
+      "Remove wet clothing and cover with blankets.",
+      "Give warm drinks if conscious."
+    ],
+    "escalation": "Seek urgent medical care."
+  },
+
+  "unconscious": {
+    "keywords": ["unconscious", "passed out", "not waking"],
+    "steps": [
+      "Check responsiveness and breathing.",
+      "Call for help.",
+      "If not breathing, begin CPR: 30 chest compressions, 2 rescue breaths."
+    ],
+    "escalation": "Continue CPR until help arrives."
+  },
+
+  "poisoning": {
+    "keywords": ["poisoning", "swallowed poison"],
+    "steps": [
+      "Do not induce vomiting unless told by medical professionals.",
+      "Try to identify the substance.",
+      "Keep the person still."
+    ],
+    "escalation": "Seek urgent medical help immediately."
+  },
+
+  "low_sugar": {
+    "keywords": ["low sugar", "hypoglycemia", "diabetes"],
+    "steps": [
+      "If conscious, give something sugary (juice, honey, glucose tablets).",
+      "Encourage the person to sit or lie down safely."
+    ],
+    "escalation": "If unconscious, do not give food — seek emergency help immediately."
+  },
+
+  "pregnancy_emergency": {
+    "keywords": ["pregnancy bleeding", "pregnancy emergency"],
+    "steps": [
+      "If heavy bleeding after childbirth, massage the uterus if trained.",
+      "Encourage breastfeeding to help the uterus contract."
+    ],
+    "escalation": "Seek urgent hospital care immediately."
+  },
+
+  "newborn_care": {
+    "keywords": ["newborn", "baby care", "newborn care"],
+    "steps": [
+      "Keep the baby warm with skin-to-skin contact or blankets.",
+      "Ensure exclusive breastfeeding.",
+      "Clean the cord with dry care."
+    ],
+    "escalation": "Seek medical care if baby is not feeding, breathing fast, or has fever."
+  }
+}
