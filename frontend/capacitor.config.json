@@ -1,0 +1,10 @@
+{
+  "appId": "com.idina0052svg.aihealthassistant",
+  "appName": "AI Health Assistant",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "http",
+    "hostname": "localhost",
+    "cleartext": true
+  }
+}

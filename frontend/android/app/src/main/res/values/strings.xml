@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ai-health-assistant</string>
+    <string name="title_activity_main">ai-health-assistant</string>
+    <string name="package_name">com.idina0052svg.aihealthassistant</string>
+    <string name="custom_url_scheme">com.idina0052svg.aihealthassistant</string>
+</resources>

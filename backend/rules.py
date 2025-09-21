@@ -1,7 +1,7 @@
 import json, os, uuid, asyncio
 from rapidfuzz import process, fuzz
 from translate import translate_text
-from ai_helper import ask_ai  # ✅ new helper for GPT
+from ai_helper import ask_ai  
 
 KB_DIR = os.path.join(os.path.dirname(__file__), "knowledge_base")
 KB_CACHE = {}

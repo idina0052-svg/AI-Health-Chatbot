@@ -4,12 +4,23 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from rules import handle_message, create_session
 
+from fastapi import Request
+
+
+
 app = FastAPI()
+
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    print(f"➡️ Incoming request: {request.method} {request.url}")
+    response = await call_next(request)
+    print(f"⬅️ Response status: {response.status_code}")
+    return response
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
     allow_credentials=True,
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )

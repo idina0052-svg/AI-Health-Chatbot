@@ -46,7 +46,9 @@
 
 <script>
 import axios from "axios";
+import { API_BASE_URL } from "@/config";
 
+console.log("🔎 API_BASE_URL:", API_BASE_URL);  
 export default {
   data() {
     return {
@@ -113,9 +115,12 @@ export default {
     },
     async callBackend(payload) {
       try {
-        const r = await axios.post("http://127.0.0.1:8000/chat", payload);
+        
+        const r = await axios.post(`${API_BASE_URL}/chat`, payload);
+       
         return r.data;
       } catch (e) {
+        
         this.messages.push({
           sender: "assistant",
           text: "⚠️ Sorry, server error.",
@@ -178,9 +183,9 @@ export default {
 .chat-app {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 310px; /* ✅ fixed width */
-  max-width: 100%;
+  height: 90vh;      /* fill exactly the screen */
+  width: 100%;
+  max-width: 420px;
   margin: auto;
   border: 1px solid #ccc;
   border-radius: 12px;
@@ -188,7 +193,11 @@ export default {
   font-family: sans-serif;
   background: #f9f9f9;
 }
-
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 /* Header */
 .chat-header {
   display: flex;
