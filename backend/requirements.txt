@@ -1,4 +1,7 @@
-fastapipip 
-
-uvicorn[standard]
+fastapi
+uvicorn
+python-dotenv
+openai
+deep-translator
 rapidfuzz
+ 

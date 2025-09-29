@@ -13,6 +13,7 @@
     "@capacitor/cli": "^7.4.3",
     "@capacitor/core": "^7.4.3",
     "axios": "^1.12.2",
+    "string-similarity": "^4.0.4",
     "vue": "^3.5.18"
   },
   "devDependencies": {

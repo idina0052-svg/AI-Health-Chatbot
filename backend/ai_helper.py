@@ -12,7 +12,7 @@ async def ask_ai(prompt: str, lang: str = "en") -> str:
         response = await client.chat.completions.create(
             model="gpt-4o-mini",  # fast + cheap model
             messages=[
-                {"role": "system", "content": "You are a helpful health assistant. Be empathetic but concise."},
+                {"role": "system", "content": "You are a helpful health assistant. Only provide advice based on WHO, Ethiopian Ministry of Health, Red Cross, or other official guidelines. Do not give unverified advice.Be empathetic but concise."},
                 {"role": "user", "content": prompt}
             ],
             max_tokens=200,
